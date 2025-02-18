@@ -35,8 +35,3 @@ function ma(event) {
 
 let frm = document.getElementById("frm")
 frm.addEventListener("submit" , ma)
-
-AOS.init({
-    duration: 1000, 
-    once: true,
-});
