@@ -8,11 +8,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- AOS CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="web-logo.jpg" type="image/x-icon">
 </head>
 <body>
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">Easy Tech</a>
@@ -29,6 +31,8 @@
             </div>
         </div>
     </nav>
+
+    <!-- Hero Section -->
     <section class="hero-section animate__animated animate__fadeIn">
         <div class="container">
             <h1 class="animate__animated animate__fadeInDown">Welcome to Easy Tech</h1>
@@ -36,6 +40,8 @@
             <a href="#products" class="btn btn-light btn-lg animate__animated animate__fadeInUp">Explore Products</a>
         </div>
     </section>
+
+    <!-- About Us Section -->
     <section id="about" class="about-section">
         <div class="container">
             <h2 class="section-title text-center" data-aos="fade-down">About Us</h2>
@@ -51,6 +57,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Features Section -->
     <section id="features" class="features-section">
         <div class="container">
             <h2 class="section-title text-center" data-aos="fade-down">Why Choose Us?</h2>
@@ -79,6 +87,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Products Section -->
     <section id="products" class="products-section">
         <div class="container">
             <h2 class="section-title text-center" data-aos="fade-down">Our Products</h2>
@@ -146,6 +156,8 @@
             </div>
         </div>
     </section>
+
+    <!-- Contact Us Section -->
     <section id="contact" class="contact-section">
         <div class="container">
             <h2 class="section-title text-center" data-aos="fade-down">Contact Us & Follow Us</h2>
@@ -172,11 +184,41 @@
             </div>
         </div>
     </section>
+
+    <!-- Footer -->
     <footer>
         <p>© 2025 All Rights Reserved - Easy Tech</p>
     </footer>
+
+    <!-- Scroll to Top Button -->
     <button id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000, // Duration of animation
+            once: true, // Animation happens only once
+        });
+
+        // Scroll to Top Button
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+            } else {
+                scrollToTopBtn.style.display = "none";
+            }
+        };
+
+        scrollToTopBtn.addEventListener("click", () => {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0; 
+        });
+    </script>
 </body>
 </html>
